@@ -12,10 +12,9 @@ import {
 } from "@mui/material"
 
 export default function Addproduct({addproduct}){
-const[newproduct,setnewproduct]=useState({
- id:21, 
+const[newproduct,setnewproduct]=useState({ 
 title:"",
-description:"",
+Description:"",
 price:0,
 image:"",
 category:""
@@ -74,7 +73,7 @@ const handleSubmit = async () => {
         setnewproduct({...newproduct,title:e.target.value})
       }}/>
       <TextField label="Description" fullWidth  onChange={(e)=>{
-        setnewproduct({...newproduct,description:e.target.value})
+        setnewproduct({...newproduct,Description:e.target.value})
       }}/>
       <TextField label="Price" type="number" fullWidth
       onChange={(e)=>{

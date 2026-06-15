@@ -20,7 +20,7 @@ useEffect(() => {
         const productsData = response.data;
       
         setproductdetails(productsData);
-        console.log(productsData)
+        // console.log(productsData)
       })
       .catch(error => {
         console.error('Error fetching products:', error);

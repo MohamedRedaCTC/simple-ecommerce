@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import React from 'react';
   import { AppBar, Toolbar, Typography, Badge, IconButton } from '@mui/material';
 
@@ -18,16 +19,20 @@ export default function Navbarcomponent({ cart }) {
         </Typography>
 <Link to={'/addproduct'}>
 
-<button> Add a new product</button>
+<Button  variant="contained"  > Add a new product</Button>
+</Link>
+<Link to={'/Mycartcomponent'}>
+
+ <Button variant="contained"  >veiw your cart</Button>
 </Link>
        
-        <div style={{ display: 'flex', gap: '15px', maxWidth: '400px' }}>
+        <div1 style={{ display: 'flex', gap: '15px', width:"" }}>
           {cart.map((item) => (
             <span key={item.id} style={{ fontSize: '12px', backgroundColor: '#fff', color: '#1976d2', padding: '2px 8px', borderRadius: '10px', whiteSpace: 'nowrap' }}>
               {item.title}... ({item.quantity})
             </span>
           ))}
-        </div>
+        </div1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <Typography variant="body1" style={{ fontWeight: 'bold' }}>
             Total: EGP{totalPrice} 

@@ -7,7 +7,7 @@ import { Route, Routes  } from 'react-router-dom';
 import Productdetails from './Productdetails';
 import Navbarcomponent from './Navbarcomponent';
 import Addproduct from './Addproduct';
-
+import Mycartcomponent from './Mycartcomponent';
 
 
 function App() {
@@ -28,11 +28,13 @@ function App() {
   const addproduct=(product)=>{
     setcards((allcards)=>[product,...allcards])
   }
+
+ 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
       .then(response => {
         const productsData = response.data;
-         console.log(productsData)
+        //  console.log(productsData)
         setcards(productsData);
         
     
@@ -51,6 +53,7 @@ function App() {
 
      <Routes>
      <Route path='/Addproduct'  element={<Addproduct addproduct={addproduct}/>}/>
+     <Route path='/Mycartcomponent'  element={<Mycartcomponent  cart={cart}/>}/>
      <Route path='/Productdetails/:id' element={<Productdetails onAddToCart={handleAddToCart}/>} /> 
      <Route path='/' element={<Products cards={cards} onAddToCart={handleAddToCart} />} />
     </Routes>  

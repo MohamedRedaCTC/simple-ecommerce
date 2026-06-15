@@ -37,7 +37,7 @@ export default function Products({cards ,onAddToCart}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary"onClick={()=>{onAddToCart(cards[key])}} >
+        <Button variant="outlined" onClick={()=>{onAddToCart(cards[key])}} >
           
          add to cart
         </Button>
