@@ -19,11 +19,15 @@ export default function Navbarcomponent({ cart }) {
         </Typography>
 <Link to={'/addproduct'}>
 
-<Button  variant="contained"  > Add a new product</Button>
+<Button  variant="contained" > Add a new product</Button>
 </Link>
 <Link to={'/Mycartcomponent'}>
 
  <Button variant="contained"  >veiw your cart</Button>
+</Link>
+<Link to={'/'}>
+
+<Button  variant="contained"  > home </Button>
 </Link>
        
         <div1 style={{ display: 'flex', gap: '15px', width:"" }}>

@@ -13,7 +13,9 @@ import {Link} from 'react-router-dom';
 
 
 export default function Products({cards ,onAddToCart}) {
-    return (      
+    return ( 
+       <>    
+       <h2> products</h2>
       <div className="product-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
      {Object.keys(cards).map(key=>(
      <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -23,7 +25,7 @@ export default function Products({cards ,onAddToCart}) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="160"
+          height="220"
           image={cards[key]?.image}
           alt="green iguana" />
         <CardContent>
@@ -48,5 +50,6 @@ export default function Products({cards ,onAddToCart}) {
      )}
        
     </div>
+    </> 
     );
   }

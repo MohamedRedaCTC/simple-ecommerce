@@ -7,6 +7,8 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import * as React from 'react';
 import Container from '@mui/material/Container';
+
+import {Link} from 'react-router-dom';
 export default function Mycartcomponent({cart }){
 return(<>
 
@@ -17,11 +19,12 @@ return(<>
    <div style={{ display: 'flex', gap: '15px' }}>
           {cart.map((item) => (
  <Container fixed style={{ display:"flex",justifyContent:"center",alignItems:"center" , flexDirection:"column"}}>
+         <Link   to={`/Productdetails/${item.id}`}>
           <Card   sx={{maxWidth:"400px" }} >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="160"
+          height="220"
           image={item.image}
           alt="green iguana" />
         <CardContent>
@@ -45,7 +48,8 @@ return(<>
          ({item.quantity})
         </Button>
       </CardActions>
-    </Card> 
+    </Card>
+     </Link>
       </Container>
           ))}
         </div>

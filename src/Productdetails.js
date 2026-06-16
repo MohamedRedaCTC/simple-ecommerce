@@ -13,7 +13,7 @@ import { useParams } from 'react-router-dom';
  export default function Productdetails ({onAddToCart} ) {
  const params=useParams()
  const[productdetails,setproductdetails]=useState([]);
- const productid= Number(params.id)+Number(1)
+ const productid= Number(params.id)
 useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${productid}`)
       .then(response => {
@@ -38,7 +38,7 @@ return (
       <CardActionArea>
         <CardMedia
           component="img"
-          height="160"
+          // height="200"
           image={productdetails.image}
           alt="green iguana" />
         <CardContent>
